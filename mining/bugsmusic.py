@@ -15,7 +15,7 @@ class Bugsmusic(object):
         soup = BeautifulSoup(self.url, 'lxml')
         ls1 = soup.find_all(name='p', attrs={"class":"title"})
         for idx, title in enumerate(ls1):
-            print(f'{idx+1}위 : {title.find("a").text}' )
+            print(f'{idx+1}위 : {title.find("a").text}')  # idx 는 0 부터 시작함
 
     @staticmethod
     def main():
